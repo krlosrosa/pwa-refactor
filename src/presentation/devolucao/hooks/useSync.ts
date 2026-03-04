@@ -9,7 +9,6 @@ import { SyncDevolucaoDatabase } from "@/_shared/db/sync.devolucao.repository";
 import { useCallback, useEffect, useState } from "react";
 import { FotosDevolucaoDatabase } from "@/_shared/db/fotos.devolucao.repository";
 import { makeSyncProdutosUseCase } from "@/factories/devolucao/produtos/SyncProdutos.factory";
-import { makeLoadDemandListUseCase } from "@/factories/devolucao/demanda/load-demand-list.factory";
 import { useAuthStore } from "@/presentation/user/authStore";
 import { makeLoadDemandListForceUseCase } from "@/factories/devolucao/demanda/load-demanda-force.factory";
 import { makeSyncApiToLocalUseCase } from "@/factories/devolucao/anomalia/syncApiToLocalAnomalia";

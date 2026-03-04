@@ -70,6 +70,7 @@ export function useConferenceItem() {
       descricao: produto?.descricao || '',
       demandaId: Number(demandaId),
       synced: 'NOT_READY',
+      tipo_dev: conference?.tipo_dev === 'DEVOLUCAO' ? 'DEVOLUCAO' : 'REENTREGA',
     });
     form.reset();
     navigate({

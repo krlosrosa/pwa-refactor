@@ -1,4 +1,3 @@
-import { Button } from "@/_shared/components/ui/button"
 import { useConferenceItem } from "../hooks/useConferenceItem"
 import { HeaderMobile } from "@/_shared/components/headerMobile"
 import { useNavigate, useParams } from "@tanstack/react-router"

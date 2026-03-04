@@ -1,6 +1,6 @@
 // components/HeaderMobile.tsx
 import { useNavigate, useRouter } from '@tanstack/react-router'
-import { ArrowLeft, UserCircle2 } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import { Button } from '@/_shared/components/ui/button'
 import { cn } from '@/_shared/lib/utils'
 import UserMenuView from '@/presentation/devolucao/views/user-menu.view'
