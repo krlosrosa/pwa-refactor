@@ -9,7 +9,7 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vitejs.dev/config/
 export default defineConfig({
   preview: {
-    allowedHosts: ["pwa-vite.lilog.app"],
+    allowedHosts: ["pwa.lilog.app"],
     host: true, // permite receber conexões externas
     port: 3000
   },
