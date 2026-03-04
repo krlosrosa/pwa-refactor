@@ -13,9 +13,11 @@ export class LoadDemandListForceUseCase {
     await this.demandRepository.removeAllDemands();
     const demandsApi = await this.apiRepository.loadDemandList(centerId);
     if(demandsApi.length > 0) {
-      this.demandRepository.saveDemandList(demandsApi.map(demand => ({
+      this.demandRepository.saveDemandList(demandsApi.map(demand => {
+        const localProgress = demand.status === 'AGUARDANDO_CONFERENCIA' ? 'NOT_STARTED' : 'CONFERENCE_IN_PROGRESS';
+        return {
         ...demand,
-        localProgress: 'NOT_STARTED',
+        localProgress: localProgress,
         telefone: demand.telefone ?? undefined,
         idTransportadora: demand.idTransportadora ?? undefined,
         cargaSegregada: demand.cargaSegregada ?? undefined,
@@ -24,7 +26,8 @@ export class LoadDemandListForceUseCase {
         centerId: demand.centerId,
         adicionadoPorId: demand.adicionadoPorId,
         conferenteId: demand.conferenteId ?? undefined,
-      })));
+      };
+    }));
     }
     const demands = await this.demandRepository.loadDemandList(centerId);
     return demands;

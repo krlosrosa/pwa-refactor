@@ -27,6 +27,10 @@ export class SelectDemandUseCase {
       return { nextStep: DemandFlowStep.START };
     }
 
+    if(demand.status === 'EM_CONFERENCIA') {
+      return { nextStep: DemandFlowStep.CONFERENCE };
+    }
+
     if (demand.localProgress === 'CHECKLIST_IN_PROGRESS') {
       return { nextStep: DemandFlowStep.CHECKLIST };
     }

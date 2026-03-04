@@ -28,7 +28,7 @@ export interface DemandaConferenciaRecord {
   lote?: string;
   quantidadeCaixas?: number;
   quantidadeUnidades?: number;
-  tipo_dev: 'DEVOLUCAO' | 'REENTREGA';
+  tipo_dev?: 'DEVOLUCAO' | 'REENTREGA';
   tipo: tipoContabilFisico;
   devolucaoNotasId?: string;
   demandaId: number;
