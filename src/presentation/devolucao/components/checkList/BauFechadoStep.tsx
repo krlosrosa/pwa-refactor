@@ -53,7 +53,6 @@ export function BauFechadoStep({ setValidateStep }: BauFechadoStepProps) {
           <label className="block">
             <input
               type="file"
-              accept="image/*"
               capture="environment"
               className="sr-only"
               onChange={handlePhotoCaptured}
@@ -71,7 +70,6 @@ export function BauFechadoStep({ setValidateStep }: BauFechadoStepProps) {
         <label className="block w-full">
           <input
             type="file"
-            accept="image/*"
             capture="environment"
             className="sr-only"
             onChange={handlePhotoCaptured}

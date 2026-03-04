@@ -52,7 +52,6 @@ export function BauAbertoStep({ setValidateStep }: BauAbertoStepProps) {
             <label className="block">
               <input
                 type="file"
-                accept="image/*"
                 capture="environment"
                 className="sr-only"
                 onChange={handlePhotoCaptured}
@@ -70,7 +69,6 @@ export function BauAbertoStep({ setValidateStep }: BauAbertoStepProps) {
           <label className="block w-full">
             <input
               type="file"
-              accept="image/*"
               capture="environment"
               className="sr-only"
               onChange={handlePhotoCaptured}
