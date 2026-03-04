@@ -22,6 +22,7 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { StartDemandaView } from './presentation/devolucao/views/startDemanda.view.tsx'
 import { ProviderSync } from './presentation/devolucao/providerSync.tsx'
 import SyncDashboard from './presentation/devolucao/views/sync-data-dashboard.view.tsx'
+import HomePage from './presentation/home/home-page.view.tsx'
 
 
 const rootRoute = createRootRoute({
@@ -29,6 +30,12 @@ const rootRoute = createRootRoute({
   <Outlet />
   <TanStackRouterDevtools />
 </>
+})
+
+const homeRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/',
+  component: HomePage,
 })
 
 
@@ -97,6 +104,7 @@ const routeTree = rootRoute.addChildren(
     anomalyRegistrationRoute,
     addExtraItemRoute,
     listaDemandaRoute,
+    homeRoute,
   ] as const
 )
 
