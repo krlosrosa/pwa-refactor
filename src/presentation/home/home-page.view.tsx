@@ -56,27 +56,6 @@ export default function HomePage() {
                 </div>
               </CardContent>
             </Card>
-
-            {/* Placeholder para futuros itens do menu */}
-            {/* 
-            <Card className="opacity-50">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center">
-                    <FileText className="h-6 w-6 text-muted-foreground" />
-                  </div>
-                  <div>
-                    <h2 className="text-lg font-semibold text-muted-foreground">
-                      Novo Item
-                    </h2>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      Em breve...
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            */}
           </div>
         </div>
       </div>
