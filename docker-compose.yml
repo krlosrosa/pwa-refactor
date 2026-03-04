@@ -1,13 +1,13 @@
 version: "3.9"
 
 services:
-  vitepwa:
+  pwa:
     build:
       context: .
       args:
         - VITE_API_URL=${VITE_API_URL}
       dockerfile: Dockerfile
-    container_name: vitepwa
+    container_name: pwa
     restart: unless-stopped
     
     # Porta interna que seu app expõe (ajuste se necessário)
