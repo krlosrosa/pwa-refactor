@@ -37,7 +37,7 @@ export class GetConferencesByDemandIdUseCase {
       seen.add(item.sku + item.lote);
       itensUi.push({
         ...item,
-        tipo_dev: item.tipo_dev,
+        tipo_dev: item.tipo_dev ?? 'DEVOLUCAO',
         hasDivergence: (caixasContabil !== caixasFisico || unidadesContabil !== unidadesFisico) && item.tipo === 'FISICO',
         hasAnomaly: anomalies.length > 0,
         isExtra: hasExtra.length === 0 && item.tipo === 'FISICO',

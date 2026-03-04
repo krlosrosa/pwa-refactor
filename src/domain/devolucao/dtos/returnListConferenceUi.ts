@@ -3,7 +3,7 @@ import type { ChecklistSyncStatus } from "@/_shared/db/database-local";
 
 export interface ReturnListConferenceUi {
   id: string;
-  tipo_dev: 'DEVOLUCAO' | 'REENTREGA' | 'FISICO';
+  tipo_dev?: 'DEVOLUCAO' | 'REENTREGA' | 'FISICO';
   sku: string;
   descricao: string;
   lote: string;
@@ -21,7 +21,7 @@ export interface ReturnListConferenceUi {
 }
 
 export interface ReturnListConferenceGroupedSku {
-  tipo_dev: 'DEVOLUCAO' | 'REENTREGA' | 'FISICO';
+  tipo_dev?: 'DEVOLUCAO' | 'REENTREGA' | 'FISICO';
   id: string;
   sku: string;
   descricao: string;

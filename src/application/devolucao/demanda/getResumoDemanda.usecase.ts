@@ -43,6 +43,7 @@ export class GetResumoDemandaUseCase {
         isExtra: hasExtra.length === 0 && item.tipo === 'FISICO',
         isChecked: item.tipo === 'FISICO',
         synced: 'NOT_READY',
+        tipo_dev: item.tipo_dev ?? 'DEVOLUCAO',
       });
     }
 

@@ -10,7 +10,7 @@ export function mapperItemToViewUi(items: DemandaConferenciaRecord[]): ReturnLis
       unidadesFisico: item.tipo === 'FISICO' ? item.quantidadeUnidades ?? 0 : 0,
       descricao: item.descricao,
       sku: item.sku,
-      tipo_dev: item.tipo_dev,
+      tipo_dev: item.tipo_dev ?? 'DEVOLUCAO',
       demandaId: item.demandaId,
       id: item.id?.toString() ?? '',
       lote: item.lote ?? '',
