@@ -23,16 +23,16 @@ services:
       - "traefik.enable=true"
 
       # Router
-      - "traefik.http.routers.vitepwa.rule=Host(`${VITE_PWA_HOST}`)"
-      - "traefik.http.routers.vitepwa.entrypoints=websecure"
-      - "traefik.http.routers.vitepwa.service=vitepwa-service"
+      - "traefik.http.routers.pwa.rule=Host(`${VITE_PWA_HOST}`)"
+      - "traefik.http.routers.pwa.entrypoints=websecure"
+      - "traefik.http.routers.pwa.service=pwa-service"
 
       # TLS
-      - "traefik.http.routers.vitepwa.tls=true"
-      - "traefik.http.routers.vitepwa.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.pwa.tls=true"
+      - "traefik.http.routers.pwa.tls.certresolver=letsencrypt"
 
       # Load balancer → porta interna
-      - "traefik.http.services.vitepwa-service.loadbalancer.server.port=3000"
+      - "traefik.http.services.pwa-service.loadbalancer.server.port=3000"
 
     networks:
       - proxy
